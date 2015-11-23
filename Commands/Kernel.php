@@ -1,5 +1,5 @@
 <?php
-namespace MalRem\Console\Command;
+namespace Mrm\Console\Command;
 
 class Kernel
 {

@@ -1,5 +1,5 @@
 <?php
-namespace MalRem\Console\Command\Module;
+namespace Mrm\Console\Command\Module;
 
 use Exception;
 use Symfony\Component\Console\Command\Command;

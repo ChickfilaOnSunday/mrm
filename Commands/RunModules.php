@@ -1,8 +1,8 @@
 <?php
-namespace MalRem\Console\Command;
+namespace Mrm\Console\Command;
 
 use Exception;
-use MalRem\Console\Command\Module\Kernel;
+use Mrm\Console\Command\Module\Kernel;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Input\InputOption;

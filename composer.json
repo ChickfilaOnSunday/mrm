@@ -1,5 +1,5 @@
 {
-    "name": "iang/mac-malware-removal",
+    "name": "iang/mrm",
     "description": "Malware removal utility.",
     "authors": [
         {
@@ -13,9 +13,9 @@
         "symfony/filesystem": "^2.7"
     },
     "autoload": {
-	"psr-4": {"MalRem\\Console\\Command\\": "Commands", "MalRem\\Console\\Command\\Module\\": "Modules"}
+	"psr-4": {"Mrm\\Console\\Command\\": "Commands", "Mrm\\Console\\Command\\Module\\": "Modules"}
     },
-    "bin": ["malrem"],
+    "bin": ["mrm"],
     "type": "project",
     "license": "MIT",
     "minimum-stability": "stable"
