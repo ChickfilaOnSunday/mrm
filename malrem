@@ -1,0 +1,26 @@
+#!/usr/local/bin/php
+<?php
+if(file_exists("vendor/autoload.php")) {
+    require_once "vendor/autoload.php";
+} else {
+    require_once "~/.composer/vendor/autoload.php";
+}
+
+use Symfony\Component\Console\Application;
+use MalRem\Console\Command\Kernel as CommandKernel;
+use MalRem\Console\Command\Module\Kernel as ModuleKernel;
+
+$application = new Application("MalRem", "0.1");
+
+$kernel = new CommandKernel;
+foreach($kernel->commands() as $command) {
+    $application->add(new $command);
+}
+
+$kernel = new ModuleKernel;
+foreach($kernel->modules() as $module) {
+    $application->add(new $module);
+}
+
+$application->setDefaultCommand("run");
+$application->run();

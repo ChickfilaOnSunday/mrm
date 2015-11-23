@@ -1,0 +1,7 @@
+curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+composer global require iang/mac-malware-removal:dev-master
+export PATH=$PATH:~/.composer/vendor/bin
+echo 'export PATH=$PATH:~/.composer/vendor/bin' > ~/.bashrc
+echo 'export PATH=$PATH:~/.composer/vendor/bin' > ~/.zshrc
+echo 'You can now run MalRem by typing:'
+echo 'malrem'
