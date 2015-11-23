@@ -12,13 +12,11 @@ use MalRem\Console\Command\Module\Kernel as ModuleKernel;
 
 $application = new Application("MalRem", "0.1");
 
-$kernel = new CommandKernel;
-foreach($kernel->commands() as $command) {
+foreach((new CommandKernel)->commands() as $command) {
     $application->add(new $command);
 }
 
-$kernel = new ModuleKernel;
-foreach($kernel->modules() as $module) {
+foreach((new ModuleKernel)->modules() as $module) {
     $application->add(new $module);
 }
 
