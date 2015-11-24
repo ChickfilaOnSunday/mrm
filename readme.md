@@ -5,6 +5,6 @@ It uses the Symfony2 Console and Filesystem components. Malware removal modules 
 
 ## Run
 ```
-bash <(curl -s http://git.io/vBGna)
+bash <(curl -s http://git.io/vBGC1)
 ```
 This command will download and run mrm.
