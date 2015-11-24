@@ -22,13 +22,12 @@ class RunModules extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $output->writeln("Loading modules...");
-        $kernel      = new Kernel;
-        foreach ($kernel->modules() as $module) {
+        foreach ((new Kernel)->modules() as $module) {
             $instance = new $module;
             $input = new ArrayInput(['command' => $instance->getName()]);
             try {
                 $output->writeln("Running " . $instance->getName());
-                $code = $this->getApplication()->doRun($input, $output);
+                $this->getApplication()->doRun($input, $output);
                 $output->writeln("");
             } catch (Exception $e) {
                 $output->writeln(PHP_EOL . "<error>An exception occurred while running " . $instance->getName() . " (" . $e->getMessage() . ") Terminating.</error>");
