@@ -3,12 +3,8 @@ mrm (Malware ReMover) is a command-line utility written in PHP for removing OS X
 
 It uses the Symfony2 Console and Filesystem components. Malware removal modules are stored in the `Modules` directory and commands to be available to the user are in the `Commands` directory. Just execute `./mrm` to run all the modules, and `./mrm list` to list commands. You will need to install Composer and run `composer install` before attempting to use it.
 
-## Quick Install
-If you already have Composer installed, the installation is two lines:
-
+## Run
 ```
-composer global require iang/mrm:dev-master
-export PATH=$PATH:~/.composer/vendor/bin
+bash <(curl -s http://git.io/vBGna)
 ```
-
-Then you should be able to run `mrm` from anywhere.
+This command will download and run mrm.
